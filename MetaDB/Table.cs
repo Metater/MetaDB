@@ -28,7 +28,7 @@ public sealed class Table
     internal Table(BitReader reader)
     {
         Deserialize(reader);
-        MetaDatabase.Log($"Deserialized table {Name} with {table.Count} top-level entries");
+        MetaDatabase.Log($"Deserialized table \"{Name}\" with {table.Count} top-level entries");
     }
 
     private void Deserialize(BitReader reader)
