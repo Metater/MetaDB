@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaDB", "MetaDB\MetaDB.csproj", "{BF121E33-0A0D-4B39-AEFD-76325CEB3624}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF121E33-0A0D-4B39-AEFD-76325CEB3624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF121E33-0A0D-4B39-AEFD-76325CEB3624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF121E33-0A0D-4B39-AEFD-76325CEB3624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF121E33-0A0D-4B39-AEFD-76325CEB3624}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3E64A10-0594-4650-86B3-79076A8672ED}
+	EndGlobalSection
+EndGlobal
