@@ -69,6 +69,7 @@ public sealed class MetaDatabase
     public void Stop(bool blockUntilStopped)
     {
         if (Stop()) return;
+        // BUG, If return, then the event is never reset, not allowing a restart properly???
         if (!blockUntilStopped) return;
         stoppedEvent.WaitOne();
         stoppedEvent.Reset();
