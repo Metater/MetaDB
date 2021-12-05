@@ -1,6 +1,6 @@
 ﻿namespace MetaDB;
 
-public enum EntryType : byte
+internal enum EntryType : byte
 {
     Base,
     ULong,
