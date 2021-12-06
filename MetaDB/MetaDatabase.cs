@@ -66,11 +66,9 @@ public sealed class MetaDatabase
         await stopped.Task;
     }
 
-    public void Stop(bool blockUntilStopped)
+    public void StopAndBlock()
     {
         if (Stop()) return;
-        // BUG, If return, then the event is never reset, not allowing a restart properly???
-        if (!blockUntilStopped) return;
         stoppedEvent.WaitOne();
         stoppedEvent.Reset();
     }

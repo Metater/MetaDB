@@ -17,9 +17,9 @@ public class Entry : ISerializable
         return children.TryGetValue(name, out child);
     }
 
-    public bool TryAddChild(string name, Entry child)
+    public bool TryAddChild(Entry child)
     {
-        return children.TryAdd(name, child);
+        return children.TryAdd(child.Name, child);
     }
 
     protected Entry() { }

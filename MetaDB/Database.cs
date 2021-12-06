@@ -5,7 +5,7 @@ public sealed class Database
     private readonly string path;
     private readonly BitWriter writer = new(32768, 64);
 
-    private readonly Dictionary<string, Table> database = new();
+    public readonly Dictionary<string, Table> database = new();
 
     public void EnsureTableExists(string name)
     {
@@ -22,9 +22,9 @@ public sealed class Database
         return database.TryGetValue(name, out table);
     }
 
-    public bool TryAddTable(string name, Table table)
+    public bool TryAddTable(Table table)
     {
-        return database.TryAdd(name, table);
+        return database.TryAdd(table.Name, table);
     }
 
     public Database(string path)

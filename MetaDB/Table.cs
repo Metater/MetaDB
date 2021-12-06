@@ -15,9 +15,9 @@ public sealed class Table
         return table.TryGetValue(name, out entry);
     }
 
-    public bool TryAddEntry(string name, Entry entry)
+    public bool TryAddEntry(Entry entry)
     {
-        return table.TryAdd(name, entry);
+        return table.TryAdd(entry.Name, entry);
     }
 
     public Table(string name)
