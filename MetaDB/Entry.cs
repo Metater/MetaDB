@@ -14,11 +14,17 @@ public class Entry : ISerializable
 
     public bool TryGetChild(string name, out Entry child)
     {
+        if (!HasChildren)
+        {
+            child = null;
+            return false;
+        }
         return children.TryGetValue(name, out child);
     }
 
     public bool TryAddChild(Entry child)
     {
+        if (!HasChildren) children = new();
         return children.TryAdd(child.Name, child);
     }
 
