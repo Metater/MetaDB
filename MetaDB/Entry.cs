@@ -47,6 +47,7 @@ public class Entry : ISerializable
         {
             EntryType.Base => new Entry(reader),
             EntryType.ULong => new ULongEntry(reader),
+            EntryType.Long => new LongEntry(reader),
             EntryType.Double => new DoubleEntry(reader),
             EntryType.Byte => new ByteEntry(reader),
             EntryType.String => new StringEntry(reader),
