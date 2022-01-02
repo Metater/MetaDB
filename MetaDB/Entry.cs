@@ -58,7 +58,7 @@ public class Entry : ISerializable
     protected void DeserializeBase(BitReader reader)
     {
         Name = reader.GetString(8);
-        int childrenCount = reader.GetUShort();
+        int childrenCount = reader.GetInt();
         if (childrenCount == 0) return;
         children = new Dictionary<string, Entry>(childrenCount);
         for (int i = 0; i < childrenCount; i++)
@@ -84,11 +84,11 @@ public class Entry : ISerializable
         writer.Put(Name, 8);
         if (!HasChildren)
         {
-            writer.Put((ushort)0);
+            writer.Put(0);
         }
         else
         {
-            writer.Put((ushort)children.Count);
+            writer.Put(children.Count);
             foreach (Entry child in children.Values)
             {
                 child.Serialize(writer);
