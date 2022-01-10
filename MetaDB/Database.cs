@@ -49,7 +49,7 @@ public sealed class Database
         Serialize(writer);
         File.WriteAllBytes(path, writer.Assemble());
         writer.Reset();
-        MetaDatabase.Log("Saved");
+        //MetaDatabase.Log("Saved");
     }
 
 
