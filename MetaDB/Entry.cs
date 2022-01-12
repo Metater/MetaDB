@@ -203,7 +203,7 @@ public class ByteEntry : Entry
 
     public override void Serialize(BitWriter writer)
     {
-        writer.Put((byte)EntryType.String);
+        writer.Put((byte)EntryType.Byte);
         SerializeBase(writer);
         writer.Put(value);
     }
