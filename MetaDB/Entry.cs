@@ -28,6 +28,36 @@ public class Entry : ISerializable
         return children.TryAdd(child.Name, child);
     }
 
+    public Entry GetChild(string name)
+    {
+        return children[name];
+    }
+
+    public ULongEntry GetULong(string name)
+    {
+        return GetChild(name) as ULongEntry;
+    }
+
+    public LongEntry GetLong(string name)
+    {
+        return GetChild(name) as LongEntry;
+    }
+
+    public DoubleEntry GetDouble(string name)
+    {
+        return GetChild(name) as DoubleEntry;
+    }
+
+    public ByteEntry GetByte(string name)
+    {
+        return GetChild(name) as ByteEntry;
+    }
+
+    public StringEntry GetString(string name)
+    {
+        return GetChild(name) as StringEntry;
+    }
+
     protected Entry() { }
 
     public Entry(string name)

@@ -27,6 +27,11 @@ public sealed class Database
         return database.TryAdd(table.Name, table);
     }
 
+    public Table GetTable(string name)
+    {
+        return database[name];
+    }
+
     public Database(string path)
     {
         this.path = path;

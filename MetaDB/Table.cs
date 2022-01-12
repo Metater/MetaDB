@@ -20,6 +20,11 @@ public sealed class Table
         return table.TryAdd(entry.Name, entry);
     }
 
+    public Entry GetEntry(string name)
+    {
+        return table[name];
+    }
+
     public Table(string name)
     {
         Name = name;
